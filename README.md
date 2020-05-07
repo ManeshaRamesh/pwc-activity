@@ -1,7 +1,7 @@
 # Manesha Ramesh
 
-#### T0 run this project, please do teh following:
+#### T0 run this project, please do the following:
 
-- clone this repo
-- run npm install
-- run node app.js
+- Clone this repo
+- Run npm install
+- Run node app.js
