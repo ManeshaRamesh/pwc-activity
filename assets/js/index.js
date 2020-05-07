@@ -215,14 +215,14 @@ var options = {
             tablestat.innerHTML = "";
             var table = document.getElementById("table");
             table.style.visibility = "visible";
-            console.log(tablestat);
+            // console.log(array);
             for (var count = array.length - 2; count > 3; count--) {
               //   console.log(
-              //     array[count],
+              //     array[count + 1],
               //     " - ",
-              //     array[count - 1],
+              //     array[count],
               //     " = ",
-              //     (array[count] - array[count + 1]) / array[count]
+              //     (array[count + 1] - array[count]) / array[count]
               //   );
 
               var row = document.createElement("tr");
@@ -240,7 +240,7 @@ var options = {
                   day: "numeric",
                 }) +
                 "</td><td> " +
-                ((array[count] - array[count + 1]) / array[count]).toFixed(2) +
+                ((array[count + 1] - array[count]) / array[count]).toFixed(2) +
                 "</td>";
               tablestat.appendChild(row);
             }
