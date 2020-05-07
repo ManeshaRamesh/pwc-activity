@@ -1,0 +1,106 @@
+<html>
+  <head> 
+    <meta charset="utf-8">
+
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  </head>
+  </head>
+  <body>
+<style>
+
+tbody {
+    display:block;
+    height:200px;
+    overflow-y:scroll;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+table {
+    width:100%;
+}
+
+</style>
+    <div class = "main-container">
+        <div class = "container">
+            <div class="row text-center">
+                <div class = "col">
+                    <h1>Covid-19</h1>
+                    <div id = "map"></div>
+
+                </div>
+            </div>
+            <div class = "row text-center" id = "message" style = "padding: 10px; visibility: visible;">
+                <div class = "col">
+                    <h5>Click on a country to see the latest News and stats on Covid 19!</h5>
+                </div>
+            </div>
+            <div class = "row ">
+                <div class = "col-6" id = "newsFeed">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner" id = "carouselBody">
+                          <div class="carousel-item active" id = "1">
+                              <div class = "col text-center" style="" >
+                                <h1></h1>
+                              </div>
+                            
+                          </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                        </a>
+                      </div>
+
+                </div>
+                <div class = "col-3 " id = "stats" style = "float: none; margin: 0 auto;">
+                    <!-- <div class = "row text-center"> -->
+                    <div class="" style="width: 18rem;">
+                        <div class="">
+                          <div class="row card-title" id = "selectedCountry"></div>
+                          <div class="row card-text" id = "selectedCountryInfo"></div>
+                          <div id = "table" style="overflow-x:auto;visibility:hidden;">
+                            <table >
+                            <thead>
+                                <th>Date</th>
+                                <th>Percentage Change (%)</th>
+                            </thead>
+                            <tbody id="statstable"></tbody>
+
+                            </table>
+                        </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world-highres.js"></script> 
+  <script src = "js/index.js"></script>
+</html>
+
+
+<!-- api key for news api = 70bccbb286ce43618d92c8d18a9b4cd8 -->
